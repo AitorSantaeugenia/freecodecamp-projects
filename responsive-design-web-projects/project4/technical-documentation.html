@@ -12,12 +12,12 @@
 <body>
     <!-- NAV -->
     <nav id="navbar">
-        <header>JS DOCUMENTATION</header>
+        <header>JS Documentation</header>
         <ul>
             <li><a class="nav-link" href="">Introduction</a></li>
             <li><a class="nav-link" href="">What you should already know</a></li>
             <li><a class="nav-link" href="">JavaScript and Java</a></li>
-            <li><a class="nav-link" href="">Hello World</a></li>
+            <li><a class="nav-link" href="">Hello world</a></li>
             <li><a class="nav-link" href="">Variables</a></li>
             <li><a class="nav-link" href="">Declaring Variables</a></li>
             <li><a class="nav-link" href="">Variable scope</a></li>
@@ -67,7 +67,7 @@
             <header>
                 What you should already know
             </header>
-            <p>This guide assumes you have the following basic background:</p>
+            This guide assumes you have the following basic background:
             <ul>
                 <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
                 <li>Good working knowledge of HyperText Markup Language (HTML).</li>
@@ -105,12 +105,12 @@
             <header>
                 Hello World
             </header>
-            <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript
-                code:</p>
+            To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript
+            code:
 
             <code>function greetMe(yourName) { alert("Hello " + yourName); }
                 greetMe("World");</code>
-            <p>Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</p>
+            Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!
         </section>
 
         <section class="main-section" id="variables">
@@ -131,19 +131,17 @@
             <header>
                 Declaring Variables
             </header>
-            <p>You can declare a variable in three ways:</p>
-            <p>With the keyword var. For example,</p>
-            <code>
-                var x = 42.
-            </code>
-            <p>This syntax can be used to declare both local and global variables.</p>
-            <p>By simply assigning it a value. For example,</p>
+            You can declare a variable in three ways:
+            With the keyword var. For example,
+            <code>var x = 42.</code>
+            This syntax can be used to declare both local and global variables.
+            By simply assigning it a value. For example,
             <code>x = 42.</code>
-            <p>This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this
-                variant.</p>
-            <p>With the keyword let. For example,</p>
+            This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this
+            variant.
+            With the keyword let. For example,
             <code>let y = 13.</code>
-            <p>This syntax can be used to declare a block scope local variable. See Variable scope below.</p>
+            This syntax can be used to declare a block scope local variable. See Variable scope below.
         </section>
 
         <section class="main-section" id="variable-scope">
@@ -158,10 +156,9 @@
                 following code will log 5, because the scope of x is the function (or global context) within which x is
                 declared, not the block, which in this case is an if statement.</p>
             <code>if (true) { var x = 5; } console.log(x); // 5</code>
-            <p>
-                This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
-            <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
-    defined</code>
+            This behavior changes, when using the let declaration introduced in ECMAScript 2015.
+            <code>if (true) { let y = 5; } console.log(y); 
+                // ReferenceError: y is not defined</code>
         </section>
 
         <section class="main-section" id="global-variables">
@@ -189,11 +186,12 @@
                 is omitted, the identifier is assumed to represent a variable.</p>
             <p>You cannot declare a constant with the same name as a function or variable in the same scope. For
                 example:</p>
-            <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
-                CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
+            <code>// THIS WILL CAUSE AN ERROR 
+                function f() {}; const f = 5; // THIS WILL CAUSE AN ERROR ALSO 
+                function f() { const g = 5; var g; //statements
                 }</code>
-            <p>However, object attributes are not protected, so the following statement is executed without problems.
-            </p>
+            However, object attributes are not protected, so the following statement is executed without problems.
+
             <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code>
         </section>
 
@@ -201,7 +199,7 @@
             <header>
                 Data types
             </header>
-            <p>The latest ECMAScript standard defines seven data types:</p>
+            The latest ECMAScript standard defines seven data types:
             <ul>
                 <li>
                     <p>Six data types that are primitives:</p>
@@ -228,29 +226,29 @@
             <header>
                 if... else statement
             </header>
-            <p>Use the if statement to execute a statement if a logical condition is true. Use the optional else clause
-                to execute a statement if the condition is false. An if statement looks as follows:</p>
+            Use the if statement to execute a statement if a logical condition is true. Use the optional else clause
+            to execute a statement if the condition is false. An if statement looks as follows:
             <code>if (condition) { statement_1; } else { statement_2; }</code>
-            <p>condition can be any expression that evaluates to true or false. See Boolean for an explanation of what
-                evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise,
-                statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if
-                statements.</p>
-            <p>You may also compound the statements using else if to have multiple conditions tested in sequence, as
-                follows:</p>
+            condition can be any expression that evaluates to true or false. See Boolean for an explanation of what
+            evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise,
+            statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if
+            statements.
+            You may also compound the statements using else if to have multiple conditions tested in sequence, as
+            follows:
             <code>if (condition_1) { statement_1; } else if (condition_2) { statement_2;
             } else if (condition_n) { statement_n; } else { statement_last; }</code>
-            <p>In the case of multiple conditions only the first logical condition which evaluates to true will be
-                executed. To execute multiple statements, group them within a block statement ({ ... }) . In general,
-                it's good practice to always use block statements, especially when nesting if statements:</p>
+            In the case of multiple conditions only the first logical condition which evaluates to true will be
+            executed. To execute multiple statements, group them within a block statement ({ ... }) . In general,
+            it's good practice to always use block statements, especially when nesting if statements:
             <code>if (condition) { statement_1_runs_if_condition_is_true;
                 statement_2_runs_if_condition_is_true; } else {
                 statement_3_runs_if_condition_is_false;
                 statement_4_runs_if_condition_is_false; }</code>
-            <p>It is advisable to not use simple assignments in a conditional expression, because the assignment can be
-                confused with equality when glancing over the code. For example, do not use the following code:</p>
+            It is advisable to not use simple assignments in a conditional expression, because the assignment can be
+            confused with equality when glancing over the code. For example, do not use the following code:
             <code>if (x = y) { /* statements here */ }</code>
-            <p>If you need to use an assignment in a conditional expression, a common practice is to put additional
-                parentheses around the assignment. For example:</p>
+            If you need to use an assignment in a conditional expression, a common practice is to put additional
+            parentheses around the assignment. For example:
             <code>if ((x = y)) { /* statements here */ }</code>
         </section>
 
@@ -284,15 +282,14 @@
             <header>
                 Function declarations
             </header>
-            <p>A function definition (also called a function declaration, or function statement) consists of the
-                function keyword, followed by:
-            </p>
+            A function definition (also called a function declaration, or function statement) consists of the
+            function keyword, followed by:
             <ul>
                 <li>The name of the function.</li>
                 <li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
                 <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
             </ul>
-            <p>For example, the following code defines a simple function named square:</p>
+            For example, the following code defines a simple function named square:
             <code>function square(number) { return number * number; }</code>
             <p>The function square takes one argument, called number. The function consists of one statement that says
                 to return the argument of the function (that is, number) multiplied by itself. The return statement
