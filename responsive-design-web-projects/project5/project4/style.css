@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 640px) {
+  
+}
+
+#navbar{
+    display:flex;
+    position:fixed;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: #be3144;
+}
+
+.nav-list{
+    display:flex;
+    list-style: none;
+    margin-right:20%;
+}
+
+.nav-list li{
+    padding: 0% 20% 0% 20%;
+}
+
+.nav-list a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+#welcome-section{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.welcome-section h1{
+    color:white;
+    font-size: 40px;
+}
+
+.welcome-section p{
+    color: #be3144;
+    font-size: 30px;
+    font-weight:lighter;
+    font-style: italic;
+}
+
+.welcome-section > * {
+    margin:0;
+    text-align: center;
+}
+
+#projects{
+    background-color: #45567d;
+    text-align: center;
+    height:100%;
+
+}
+
+#projects > h2{
+    color:white;
+    margin: 0 auto;
+    padding-top: 5%;
+    font-size:40px;
+    width: 640px;
+    font-weight:lighter;
+    border-bottom: 1px solid white;
+}
+
+.projects-div{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom:3%;
+
+}
+
+.projects-card p{
+    width: 597px;
+}
+
+.projects-div img{
+ max-height: 250px;
+ max-width: 597px;
+ min-width: 597px;
+}
+
+.projects-div a{
+    text-decoration: none;
+}
+
+
+.project-tile{
+  color:white;
+  background-color: #3a3d40;
+  margin: 0 auto;
+  padding:2% 0 2% 0;
+  margin-top:5%;
+}
+
+.code {
+    color: #be3144;
+}
+
+.btn{
+    background-color: #3a3d40;
+    padding: 1% 3% 1% 3%;
+    color:white;
+    text-decoration: none;
+}
+
+.projects-btn{
+    padding: 1% 3% 4% 3%;
+}
+
+#contact{
+    background-color: #3a3d40;
+    text-align: center;
+}
+
+.contact-section{
+    margin:0 auto;
+}
+
+.contact-section h2{
+    margin: 0;
+    color: white;
+    font-size: 60px;
+    padding-top:60px;
+}
+
+.contact-section p{
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: lighter;
+    padding-bottom:4%;
+}
+
+.profile-link{
+    text-decoration: none;
+    color:white;
+    padding-right: 5%;
+    margin:0 auto;
+
+
+}
+
+.contact-section-links{
+    padding-bottom:5%;
+}
+
+footer {
+    color:white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background: #3a3d40;;
+    border-top: 4px solid #be3144;;
+}
+
+
+footer a:visited{
+    color: white;
+}
+
+@media (max-width: 1220px) {
+    .projects-div{
+        display:block;
+    }
+
+    #navbar{
+        justify-content: center;
+        width: 100vw;
+    }
+
+}
+
+@media (max-width: 660px) {
+    .projects-div img {
+        max-width: 300px;
+        min-width: 300px;
+    }
+
+    .projects-card p {
+        max-width: 300px;
+        min-width: 300px;
+    }
+
+    #projects > h2 {
+        width:100%;
+        font-size:20px;
+    }
+
+    .contact-section h2{
+        font-size:30px;
+    }
+
+    .contact-section-links a{
+        font-size:12px;
+    }
+    #navbar{
+        justify-content: center;
+
+    }
+
+    .nav-list{
+        display:block;
+    }
+
+}
+
+@media (max-width: 317px) {
+    .projects-div img {
+        max-width: 200px;
+        min-width: 200px;
+    }
+
+    .projects-card p {
+        max-width: 200px;
+        min-width: 200px;
+    }
+
+    #projects > h2 {
+        width:100%;
+        font-size:20px;
+    }
+
+    .contact-section h2{
+        font-size:30px;
+    }
+
+    .contact-section-links a{
+        font-size:12px;
+    }
+    #navbar{
+        justify-content: center;
+
+    }
+
+    .nav-list{
+        display:block;
+    }
+
+    footer p{
+        text-align: center;
+    }
+}
+
+@media (max-width: 580px) {
+    .contact-section-links{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-bottom:20%;
+        padding-top:10%;
+    }
+    .contact-section-links a{
+        margin-bottom:2%;
+    }
+}
