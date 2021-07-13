@@ -4,6 +4,7 @@ body{
     background-color: #ffffff;
     color: #4d4e53;
     font-family: 'Open Sans';
+    line-height: 1.5;
 }
 
 main{
@@ -64,4 +65,57 @@ main{
     padding: 5px;
     margin: 2%;
     font-size: 12px;
+}
+
+
+.main-section > article{
+    margin-left:2%;
+}
+
+section li{
+    margin: 15px 0px 0px 20px;
+}
+
+section article{
+    margin: 15px;
+}
+
+.color-green{
+    color:green;
+}
+
+.color-purple{
+    color:purple;
+}
+
+.color-blue{
+    color:blue;
+}
+
+.color-lightred{
+    color:lightcoral;
+}
+
+@media (max-width: 640px) {
+    #navbar{
+        width: 100px;
+        min-width: 200px;
+    }
+    #navbar header{
+        font-size:20px;
+    }
+
+    #main-doc{
+        margin-left:200px;
+    }
+
+    section li {
+        margin: 0px;
+    }
+
+    section ul {
+        margin: 0px;
+        padding:0px;
+        padding-left:20px;
+    }
 }
