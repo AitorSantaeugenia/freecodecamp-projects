@@ -8,4 +8,8 @@ Projects completed while going through the FreeCodeCamp course.
    4. Build a Technical Documentation Page - [View On CodePen](https://codepen.io/santaeugeniaJ/full/oNWBxrx).
    5. Build a Personal Portfolio Webpage - [View On CodePen](https://codepen.io/santaeugeniaJ/full/yLbgVqx).
 
+   ![Alt text](https://user-images.githubusercontent.com/14861253/125516305-8458e0e0-75d4-4c47-8ea4-8d2cdda69898.png)
+
+## JavaScript Algorithms and Data Structures Certification
+
    [Donate to freeCodeCamp](https://donate.freecodecamp.org/).
