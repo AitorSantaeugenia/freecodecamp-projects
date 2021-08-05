@@ -17,6 +17,4 @@ Projects completed while going through the FreeCodeCamp course.
    4. Telephone Number Validator - [View On CodePen]().
    5. Cash Register - [View On CodePen]().
 
-   ![Alt text]()
-
    [Donate to freeCodeCamp](https://donate.freecodecamp.org/).
