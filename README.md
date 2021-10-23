@@ -12,8 +12,8 @@ Projects completed while going through the FreeCodeCamp course.
 
 ## JavaScript Algorithms and Data Structures Certification
    1. Palindrome Checker - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/javascript-algorithms-and-data-structure-projects/project_1).
-   2. Roman Numeral Converter - [Check code On Github]().
-   3. Caesars Cipher - [Check code On Github]().
+   2. Roman Numeral Converter - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/blob/main/javascript-algorithms-and-data-structure-projects/project_2/project2_roman_numeral_converter.js).
+   3. Caesars Cipher - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/blob/main/javascript-algorithms-and-data-structure-projects/project_3/project3_caesars_cipher.js).
    4. Telephone Number Validator - [Check code On Github]().
    5. Cash Register - [Check code On Github]().
 
