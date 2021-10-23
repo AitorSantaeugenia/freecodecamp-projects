@@ -11,7 +11,10 @@ We'll pass strings with varying formats, such as racecar, RaceCar, and race CAR 
 We'll also pass strings with special symbols, such as 2A3*3a2, 2A3 3a2, and 2_A3*3#A2.
 */
 function palindrome(str) {
-	//return str == str.split('').reverse().join('').toLowerCase(); <-- Not working properly, need to remove special chars
+	//first test <-- Not working properly, need to remove special chars
+	//return str === str.split('').reverse().join('').toLowerCase();
+
+	//\W matches any non-word character (equivalent to [^a-zA-Z0-9_])
 	let regex = /[\W_]/g;
 	let arrayNoSpChars = str.toLowerCase().replace(regex, '');
 	//return arrayNoSpChars
