@@ -39,20 +39,59 @@ See below for an example of a cash-in-drawer array:
 ]
 */
 function checkCashRegister(price, cash, cid) {
-	var change;
+	//total cid param
+	let total = 0;
+	//change to return
+	let changeCurrency = cash - price;
+	//currencies
+	const currencies = {
+		PENNY: 0.01,
+		NICKEL: 0.05,
+		DIME: 0.1,
+		QUARTER: 0.25,
+		ONE: 1.0,
+		FIVE: 5.0,
+		TEN: 10.0,
+		TWENTY: 20.0,
+		'ONE HUNDRED': 100.0
+	};
 
-	let currency = [
-		[ 'PENNY', 0.01 ],
-		[ 'NICKEL', 0.05 ],
-		[ 'DIME', 0.1 ],
-		[ 'QUARTER', 0.25 ],
-		[ 'ONE', 1 ],
-		[ 'FIVE', 5 ],
-		[ 'TEN', 10 ],
-		[ 'TWENTY', 20 ],
-		[ 'ONE HUNDRED', 100 ]
-	];
-	return change;
+	//total cid SUM
+	for (let element of cid) {
+		total += element[1];
+	}
+	//toFixed for two decimals, Number() || parseFloat() to transform to num
+	total = total.toFixed(2);
+
+	const change = [];
+	//return insufficient funds if change is greater than total
+	if (changeCurrency > total) {
+		return { status: 'INSUFFICIENT_FUNDS', change: change };
+		//return closed if change is equal than total
+	} else if (changeCurrency.toFixed(2) === total) {
+		return { status: 'CLOSED', change: cid };
+		//return OPEN if change lower than total
+	} else {
+		cid = cid.reverse();
+		for (let currency of cid) {
+			let temp = [ currency[0], 0 ];
+			while (changeCurrency >= currencies[currency[0]] && currency[1] > 0) {
+				temp[1] += currencies[currency[0]];
+				currency[1] -= currencies[currency[0]];
+				changeCurrency -= currencies[currency[0]];
+				changeCurrency = changeCurrency.toFixed(2);
+			}
+			if (temp[1] > 0) {
+				change.push(temp);
+			}
+		}
+	}
+
+	if (changeCurrency > 0) {
+		return { status: 'INSUFFICIENT_FUNDS', change: [] };
+	}
+
+	return { status: 'OPEN', change: change };
 }
 
 checkCashRegister(19.5, 20, [
@@ -67,19 +106,6 @@ checkCashRegister(19.5, 20, [
 	[ 'ONE HUNDRED', 100 ]
 ]);
 
-console.log(
-	checkCashRegister(19.5, 20, [
-		[ 'PENNY', 1.01 ],
-		[ 'NICKEL', 2.05 ],
-		[ 'DIME', 3.1 ],
-		[ 'QUARTER', 4.25 ],
-		[ 'ONE', 90 ],
-		[ 'FIVE', 55 ],
-		[ 'TEN', 20 ],
-		[ 'TWENTY', 60 ],
-		[ 'ONE HUNDRED', 100 ]
-	])
-);
 console.log(
 	checkCashRegister(19.5, 20, [
 		[ 'PENNY', 1.01 ],
@@ -107,3 +133,17 @@ console.log(
 		[ 'ONE HUNDRED', 100 ]
 	])
 ); //return {status: "OPEN", change: [["TWENTY", 60], ["TEN", 20], ["FIVE", 15], ["ONE", 1], ["QUARTER", 0.5], ["DIME", 0.2], ["PENNY", 0.04]]}
+
+console.log(
+	checkCashRegister(19.5, 20, [
+		[ 'PENNY', 0.01 ],
+		[ 'NICKEL', 0 ],
+		[ 'DIME', 0 ],
+		[ 'QUARTER', 0 ],
+		[ 'ONE', 1 ],
+		[ 'FIVE', 0 ],
+		[ 'TEN', 0 ],
+		[ 'TWENTY', 0 ],
+		[ 'ONE HUNDRED', 0 ]
+	])
+);
