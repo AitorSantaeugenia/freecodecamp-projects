@@ -1,13 +1,17 @@
+/* AJ
+QUOTES API: https://type.fit/api/quotes
+	text: ""
+	author: ""
+
+Check it on codepen: https://codepen.io/santaeugeniaJ/pen/yLojZQg
+Code in github: https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/front_end_development_libraries/project1_random_quote_machine
+*/
 * {
     transition: all 0.2s ease-in-out;
 }
 
 body{
     font-family: "Raleway", sans-serif;
-}
-
-.red{
-    border:1px solid red;
 }
 
 #text{
@@ -44,4 +48,60 @@ body{
     text-align: right;
     padding:30px !important;
     margin:0 !important;
+    clear: both;
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+
+.containerButtons{
+    justify-content: space-between;
+}
+
+#tweet-quote{
+    color:white;
+ 
+}
+#tweet-quote:hover {
+    opacity: 0.8;
+}
+
+#tumblr-quote{
+    color:white;
+    margin-left:10px;
+}
+#tumblr-quote:hover {
+    opacity: 0.8;
+}
+#new-quote:hover{
+    opacity: 0.8;
+}
+
+.btn{
+    color:white;
+}
+
+.btn:hover{
+    color:white;
+}
+.margin-top10{
+    margin-top:40px;
+}
+
+.cWhite{
+    color:white;
+}
+
+.noFormat{
+    text-decoration: none;
+    color:white;
+    border: none;
+}
+
+.wBorder{
+    border:1px solid white !important;
+}
+
+.wBorder:hover{
+    opacity: 0.5;
 }

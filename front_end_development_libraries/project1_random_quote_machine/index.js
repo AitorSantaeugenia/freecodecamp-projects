@@ -2,11 +2,14 @@
 QUOTES API: https://type.fit/api/quotes
 	text: ""
 	author: ""
+
+Check it on codepen: https://codepen.io/santaeugeniaJ/pen/yLojZQg
+Code in github: https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/front_end_development_libraries/project1_random_quote_machine
 */
 function APP() {
 	const [ quotes, setQuotes ] = React.useState([]);
 	const [ randomQuote, setRandomQuote ] = React.useState([]);
-	const [ color, setColor ] = React.useState('#2c3e50');
+	const [ color, setColor ] = React.useState('#9b59b6');
 
 	React.useEffect(() => {
 		async function fetchData() {
@@ -50,7 +53,9 @@ function APP() {
 						{randomQuote ? (
 							<div>
 								<p className="card-text" id="text">
-									<i className="fa fa-quote-left mr-10 fs-10"> </i>
+									<i className="fa fa-quote-left mr-10 fs-10" style={{ color: color }}>
+										{' '}
+									</i>
 									{randomQuote.text}
 								</p>
 								<h5 className="card-title" id="author">
@@ -62,40 +67,75 @@ function APP() {
 							<h2>Loading</h2>
 						)}
 
-						<div className="d-flex flex-row red">
-							<a
-								href={
-									'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' +
-									encodeURIComponent('"' + randomQuote.text + '"' + randomQuote.author)
-								}
-								className="btn btn-warning"
-								target="_blank"
-								id="tweet-quote"
-							>
-								{' '}
-								<i className="fa fa-twitter" />
-							</a>
-							<a
-								href={
-									'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=' +
-									encodeURIComponent(randomQuote.author) +
-									'&content=' +
-									encodeURIComponent(randomQuote.text) +
-									'&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbutton&shareSource=tumblr_share_button'
-								}
-								className="btn btn-danger"
-								target="_blank"
-							>
-								<i className="fa fa-tumblr" />
-							</a>
-							<button onClick={getNewQuote} className="btn btn-primary ml-3" id="new-quote">
-								New quote
-							</button>
+						<div className="d-flex flex-row containerButtons container">
+							<div className="leftDiv">
+								<a
+									href={
+										'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' +
+										encodeURIComponent('"' + randomQuote.text + '"' + randomQuote.author)
+									}
+									className="btn"
+									target="_blank"
+									id="tweet-quote"
+									style={{ backgroundColor: color }}
+								>
+									{' '}
+									<i className="fa fa-twitter" />
+								</a>
+								<a
+									href={
+										'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=' +
+										encodeURIComponent(randomQuote.author) +
+										'&content=' +
+										encodeURIComponent(randomQuote.text) +
+										'&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbutton&shareSource=tumblr_share_button'
+									}
+									className="btn"
+									target="_blank"
+									id="tumblr-quote"
+									style={{ backgroundColor: color }}
+								>
+									<i className="fa fa-tumblr" />
+								</a>
+							</div>
+							<div className="rigthDiv">
+								<button
+									onClick={getNewQuote}
+									className="btn ml-3"
+									id="new-quote"
+									style={{ backgroundColor: color }}
+								>
+									New quote
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
+
+				<div className="text-center margin-top10 cWhite">
+					<a href="https://github.com/AitorSantaeugenia" target="_blank" className="noFormat">
+						<h3 className="noFormat">Aitor J. Santaeugenia</h3>
+					</a>
+				</div>
+				<div className="text-center cWhite">
+					<a
+						href="https://github.com/AitorSantaeugenia"
+						className="btn wBorder"
+						target="_blank"
+						id="tumblr-quote"
+					>
+						<i className="fa fa-github" />
+					</a>
+					<a
+						href="https://www.linkedin.com/in/aitorjsantaeugenia/"
+						className="btn wBorder"
+						target="_blank"
+						id="tumblr-quote"
+					>
+						<i className="fa fa-linkedin" />
+					</a>
+				</div>
 			</div>
-			{/* {quotes.map((quote) => <div>{quote.text}</div>)} */}
 		</div>
 	);
 }
