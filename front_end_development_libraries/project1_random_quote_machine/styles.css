@@ -1,0 +1,47 @@
+* {
+    transition: all 0.2s ease-in-out;
+}
+
+body{
+    font-family: "Raleway", sans-serif;
+}
+
+.red{
+    border:1px solid red;
+}
+
+#text{
+    font-weight: 500;
+    font-size: 2em;
+    clear: both;
+    margin: 0 !important;
+}
+
+.mr-10{
+    margin-right:20px;
+}
+
+.fs-10{
+    font-size: 0.8em !important;
+}
+
+.align-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#quote-box{
+    padding:50px;
+    text-align: center;
+    margin: 0 !important;
+
+}
+
+#author{
+    text-align: right;
+    padding:30px !important;
+    margin:0 !important;
+}
