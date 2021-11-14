@@ -61,6 +61,11 @@ body{
     padding-top:20px !important;
     background-color: white;
 }
+
+#preview img{
+    max-width: 100%;
+}
+
 .contactDiv{
     min-width: 80%;
     max-width: 80%;
