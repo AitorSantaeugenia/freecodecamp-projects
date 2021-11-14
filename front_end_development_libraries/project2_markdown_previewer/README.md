@@ -1,5 +1,5 @@
-### Random quote machine from Freecodecamp
+### Markdown previewer
 
-![Alt text](https://user-images.githubusercontent.com/14861253/141412741-d4f4d7c4-b272-479f-9ca7-41218537f9e5.png)
-[View On CodePen](https://codepen.io/santaeugeniaJ/full/yLojZQg) </br>
-[Try it on FreeCodeCamp](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-random-quote-machine)
+![Alt text](https://user-images.githubusercontent.com/14861253/141669574-fd21d2e5-c701-4d9b-8311-a65ade2c66de.png)
+[View On CodePen](https://codepen.io/santaeugeniaJ/full/dyzqOEJ) </br>
+[Try it on FreeCodeCamp](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/front_end_development_libraries/project2_markdown_previewer)
