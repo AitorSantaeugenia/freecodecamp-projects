@@ -2,3 +2,93 @@
 Check it on codepen: https://codepen.io/santaeugeniaJ/full/dyzqOEJ
 Code in github: https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/front_end_development_libraries/project2_markdown_previewer
 */
+
+body{
+    background-color: rgb(241, 241, 241);
+}
+
+.container{
+    margin-top:20px !important;
+}
+
+.bottomDiv{
+    margin-bottom:20px;
+}
+
+.tittleText{
+    font-family: Russo One;
+    margin:0 !important;
+    font-weight: bolder;
+    margin-left:20px !important;
+    font-size: 24px;
+}
+
+.headerDiv1{
+    background-color:rgb(196, 196, 196);
+    min-width: 60%;
+    max-width: 60%;
+    margin:0 auto !important;
+    margin-bottom:0px !important;
+    border:1px solid black;
+}
+
+.headerDiv2{
+    background-color:rgb(196, 196, 196);
+    min-width: 80%;
+    max-width: 80%;
+    margin:0 auto !important;
+    margin-bottom:0px !important;
+    border:1px solid black;
+}
+
+.headerDiv2 i, .headerDiv1 i {
+    line-height: 36px;
+    margin-left:10px;
+}
+
+#editor{
+    width:60%;
+}
+
+#preview{
+    border:1px solid black;
+    min-height: 50vh;
+    min-width: 80%;
+    max-width: 80%;
+    margin:0 auto;
+    text-align: left !important;
+    padding:50px;
+    padding-top:20px !important;
+    background-color: white;
+}
+.contactDiv{
+    min-width: 80%;
+    max-width: 80%;
+    margin:0 auto;
+    margin-bottom:10px;
+    border-bottom:2px solid rgb(155, 155, 155);
+}
+
+.noFormat{
+    text-decoration: none;
+    color:black;
+}
+
+.noFormat:hover{
+    opacity: 0.5;
+}
+
+.underline{
+    text-decoration: underline !important;
+}
+
+.wBorder{
+    border:1px solid black !important;
+    margin-bottom:10px;
+}
+
+.wBorder:hover{
+    opacity:0.5;
+}
+
+/* font-family: Russo One; */
