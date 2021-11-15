@@ -1,0 +1,38 @@
+/* AJ
+Check it on codepen: https://codepen.io/santaeugeniaJ/full/MWvzKYJ
+Code in github: https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/front_end_development_libraries/project3_drum_machine
+*/
+
+.drumMachine{
+    max-width: 800px;
+    border:5px solid rgb(136, 17, 17);
+    margin:0 auto;
+}
+
+.marginTop1{
+    margin-top:20px !important;
+}
+
+.marginRight1{
+    margin-right:10px;
+}
+
+.noFormat{
+    color:white;
+    text-decoration: none;
+    max-width: 800px;
+    margin:0 auto;
+
+}
+
+.noFormat:hover{
+    opacity:0.5;
+}
+.wBorder{
+    color:white !important;
+    border:1px solid rgb(136, 17, 17) !important;
+}
+
+.wBorder:hover{
+    background-color:rgb(136, 17, 17);
+}
