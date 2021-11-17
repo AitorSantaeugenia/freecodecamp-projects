@@ -31,9 +31,10 @@ Projects completed while going through the FreeCodeCamp course.
    &nbsp;&nbsp;&nbsp;&nbsp;- [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/front_end_development_libraries/project2_markdown_previewer).
    3. Drum Machine - [View On CodePen](https://codepen.io/santaeugeniaJ/full/MWvzKYJ).</br>
    &nbsp;&nbsp;&nbsp;&nbsp;- [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/front_end_development_libraries/project3_drum_machine).
+   4. JavaScript Calculator - [View On CodePen](https://codepen.io/santaeugeniaJ/full/mdMaKme).</br>
+   &nbsp;&nbsp;&nbsp;&nbsp;- [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/front_end_development_libraries/project4_javascript_calculator).
    
-   <!--3. Drum Machine - [Check code On Github]().
-   4. JavaScript Calculator - [Check code On Github]().
+   <!--
    5. 25 + 5 Clock - [Check code On Github](). -->
 
    [Donate to freeCodeCamp](https://donate.freecodecamp.org/).
