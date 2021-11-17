@@ -1,0 +1,121 @@
+/* AJ
+Check it on codepen: https://codepen.io/santaeugeniaJ/full/mdMaKme
+Code in github: https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/front_end_development_libraries/project4_javascript_calculator
+*/
+body{
+    background-color:rgb(87, 114, 202) !important;
+    font-family: Share Tech Mono, monospace !important;
+}
+
+.container{
+    padding-top:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.colorWhite{
+    color:white;
+} 
+.pad-30{
+    padding-bottom:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "dis dis dis dis"
+    "AC C div times"
+    "seven eight nine minus"
+    "four five six plus"
+    "one two three equal"
+    "zero zero dot equal";
+    border:5px solid black;
+}
+
+.padButton{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 20px 40px;
+    background-color: gray;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.padButton:hover{
+    border:1px solid white;
+    color: rgb(99, 99, 99);
+}
+
+.zero{
+    grid-area: zero;
+}
+
+.equal{
+    grid-area: equal;
+}
+
+input::placeholder{
+    color:white;
+}
+
+.dis{
+    grid-area: dis;
+    background-color:black;
+    text-align: right;
+    font-size: 20px;
+}
+
+.dark-gray{
+    background-color: #333;
+}
+
+.redButton{
+    background-color:tomato;
+}
+
+.blueButton{
+    background-color:rgb(69, 69, 238);
+}
+.total{
+    padding:5px 20px;
+    color:yellow;
+}
+.dis input{
+    width:100%;
+    color:white;
+    padding:5px 20px;
+    text-align: right;
+    background-color:black;
+}
+
+.footer{
+    margin-bottom:80px;
+}
+
+.noFormat{
+    text-decoration: none;
+    color:white;
+    padding-top:30px;
+}
+
+.marginRight10{
+    margin-right:10px;
+}
+
+.marginTop20{
+    margin-top:20px;
+}
+
+.wBorder{
+    border:1px solid white !important;
+}
+
+.wBorder:hover{
+    opacity:0.5 !important;
+}
