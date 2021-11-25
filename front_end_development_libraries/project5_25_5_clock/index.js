@@ -96,6 +96,8 @@ function App() {
 					formatTime={formatTime}
 					changeTime={changeTime}
 					reqname={'break-label'}
+					buttoniddown={'break-decrement'}
+					buttonidup={'break-increment'}
 				/>
 
 				<Lenght
@@ -106,6 +108,8 @@ function App() {
 					formatTime={formatTime}
 					changeTime={changeTime}
 					reqname={'session-label'}
+					buttoniddown={'session-decrement'}
+					buttonidup={'session-increment'}
 				/>
 			</div>
 			<h3>{onBreak ? 'Break' : 'Session'}</h3>
@@ -124,15 +128,14 @@ function App() {
 	);
 }
 
-function Lenght({ title, changeTime, type, time, formatTime, reqname }) {
+function Lenght({ title, changeTime, type, time, formatTime, reqname, buttoniddown, buttonidup }) {
 	return (
 		<div>
 			<h3 id={reqname}>{title}</h3>
 			<div className="time-sets">
 				<button
 					className="btn-small deep-purple lighten-2"
-					id="break-decrement"
-					id="break-increment"
+					id={buttoniddown}
 					onClick={() => changeTime(-60, type)}
 				>
 					<i className="large material-icons">arrow_downward</i>
@@ -140,8 +143,7 @@ function Lenght({ title, changeTime, type, time, formatTime, reqname }) {
 				<h3>{formatTime(time)}</h3>
 				<button
 					className="btn-small deep-purple lighten-2"
-					id="session-decrement"
-					id="session-increment"
+					id={buttonidup}
 					onClick={() => changeTime(60, type)}
 				>
 					<i className="large material-icons">arrow_upward</i>
