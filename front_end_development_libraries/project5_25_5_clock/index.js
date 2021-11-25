@@ -132,6 +132,20 @@ function App() {
 			<button className="btn-large deep-purple ligthen-2" id="reset" onClick={resetTime}>
 				<i className="material-icons">autorenew</i>
 			</button>
+			<br />
+			<br />
+			<div className="toGithub">
+				<a
+					href="https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/front_end_development_libraries/project5_25_5_clock"
+					className="btn wBorder marginRight10"
+					target="_blank"
+					id="tumblr-quote"
+				>
+					{' '}
+					Check the code on &nbsp;
+					<i className="fa fa-github" />
+				</a>
+			</div>
 			<hr className="separator" />
 			<div className="footer">
 				<div className="text-center ">
