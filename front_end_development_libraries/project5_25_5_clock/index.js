@@ -9,7 +9,12 @@ function App() {
 	const [ sessionTime, setSessionTime ] = React.useState(25 * 60);
 	const [ timerOn, setTimerOn ] = React.useState(false);
 	const [ onBreak, setOnBreak ] = React.useState(false);
-	const [ beepAudio, setBeepAudio ] = React.useState(new Audio('./beep.mp3'));
+	// const [ beepAudio, setBeepAudio ] = React.useState(new Audio('./beep.mp3'));
+	const [ beepAudio, setBeepAudio ] = React.useState(
+		new Audio(
+			'https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav'
+		)
+	);
 
 	const formatTime = (time) => {
 		let min = Math.floor(time / 60);
@@ -77,6 +82,7 @@ function App() {
 		setDisplayTime(25 * 60);
 		setBreakTime(5 * 60);
 		setSessionTime(25 * 60);
+		setOnBreak(false);
 	};
 
 	const playBeepSound = () => {
@@ -98,6 +104,7 @@ function App() {
 					reqname={'break-label'}
 					buttoniddown={'break-decrement'}
 					buttonidup={'break-increment'}
+					elemDefDis={'break-length'}
 				/>
 
 				<Lenght
@@ -110,25 +117,52 @@ function App() {
 					reqname={'session-label'}
 					buttoniddown={'session-decrement'}
 					buttonidup={'session-increment'}
+					elemDefDis={'session-length'}
 				/>
 			</div>
-			<h3>{onBreak ? 'Break' : 'Session'}</h3>
-			<h1>{formatTime(displayTime)}</h1>
-			<button className="btn-large deep-purple ligthen-2" onClick={controlTime}>
+			<h3 id="timer-label">{onBreak ? 'Break' : 'Session'}</h3>
+			<h1 id="time-left">{formatTime(displayTime)}</h1>
+			<button className="btn-large deep-purple ligthen-2" id="start_stop" onClick={controlTime}>
 				{timerOn ? (
 					<i className="material-icons">pause_circle_filled</i>
 				) : (
 					<i className="material-icons">play_circle_filled</i>
 				)}
 			</button>
-			<button className="btn-large deep-purple ligthen-2" onClick={resetTime}>
+			<button className="btn-large deep-purple ligthen-2" id="reset" onClick={resetTime}>
 				<i className="material-icons">autorenew</i>
 			</button>
+			<hr className="separator" />
+			<div className="footer">
+				<div className="text-center ">
+					<a href="https://github.com/AitorSantaeugenia" target="_blank" className="noFormat">
+						<h3 className="noFormat">Aitor J. Santaeugenia</h3>
+					</a>
+				</div>
+				<div className="text-center marginTop20">
+					<a
+						href="https://github.com/AitorSantaeugenia"
+						className="btn wBorder marginRight10"
+						target="_blank"
+						id="tumblr-quote"
+					>
+						<i className="fa fa-github" />
+					</a>
+					<a
+						href="https://www.linkedin.com/in/aitorjsantaeugenia/"
+						className="btn wBorder"
+						target="_blank"
+						id="tumblr-quote"
+					>
+						<i className="fa fa-linkedin" />
+					</a>
+				</div>
+			</div>
 		</div>
 	);
 }
 
-function Lenght({ title, changeTime, type, time, formatTime, reqname, buttoniddown, buttonidup }) {
+function Lenght({ title, changeTime, type, time, formatTime, reqname, buttoniddown, buttonidup, elemDefDis }) {
 	return (
 		<div>
 			<h3 id={reqname}>{title}</h3>
@@ -140,7 +174,7 @@ function Lenght({ title, changeTime, type, time, formatTime, reqname, buttoniddo
 				>
 					<i className="large material-icons">arrow_downward</i>
 				</button>
-				<h3>{formatTime(time)}</h3>
+				<h3 id={elemDefDis}>{formatTime(time)}</h3>
 				<button
 					className="btn-small deep-purple lighten-2"
 					id={buttonidup}
