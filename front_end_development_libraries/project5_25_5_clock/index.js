@@ -89,21 +89,23 @@ function App() {
 			<h1>25 + 5 Clock</h1>
 			<div className="dual-container">
 				<Lenght
-					title={'break legth'}
+					title={'break length'}
 					changeTime={null}
 					type={'break'}
 					time={breakTime}
 					formatTime={formatTime}
 					changeTime={changeTime}
+					reqname={'break-label'}
 				/>
 
 				<Lenght
-					title={'session legth'}
+					title={'session length'}
 					changeTime={null}
 					type={'session'}
 					time={sessionTime}
 					formatTime={formatTime}
 					changeTime={changeTime}
+					reqname={'session-label'}
 				/>
 			</div>
 			<h3>{onBreak ? 'Break' : 'Session'}</h3>
@@ -122,16 +124,26 @@ function App() {
 	);
 }
 
-function Lenght({ title, changeTime, type, time, formatTime }) {
+function Lenght({ title, changeTime, type, time, formatTime, reqname }) {
 	return (
 		<div>
-			<h3>{title}</h3>
+			<h3 id={reqname}>{title}</h3>
 			<div className="time-sets">
-				<button className="btn-small deep-purple lighten-2" onClick={() => changeTime(-60, type)}>
+				<button
+					className="btn-small deep-purple lighten-2"
+					id="break-decrement"
+					id="break-increment"
+					onClick={() => changeTime(-60, type)}
+				>
 					<i className="large material-icons">arrow_downward</i>
 				</button>
 				<h3>{formatTime(time)}</h3>
-				<button className="btn-small deep-purple lighten-2" onClick={() => changeTime(60, type)}>
+				<button
+					className="btn-small deep-purple lighten-2"
+					id="session-decrement"
+					id="session-increment"
+					onClick={() => changeTime(60, type)}
+				>
 					<i className="large material-icons">arrow_upward</i>
 				</button>
 			</div>
