@@ -2,3 +2,23 @@
 Check it on codepen: https://codepen.io/santaeugeniaJ/full/wvqbbaY
 Code in github: https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/front_end_development_libraries/project5_25_5_clock
 */
+.time-sets{
+    display:grid;
+    grid-template-columns: 50px 200px 50px;
+    justify-items: center;
+    align-items:center;
+}
+
+.dual-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    width:700px;
+    margin: auto;
+    justify-items: center;
+    align-items: center;
+}
+
+body{
+    color:white;
+    background-color:#333;
+}
