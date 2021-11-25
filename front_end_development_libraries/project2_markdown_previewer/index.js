@@ -81,6 +81,20 @@ function App() {
 					>
 						<i className="fa fa-linkedin" />
 					</a>
+					<br />
+					<br />
+					<div className="toGithub">
+						<a
+							href="https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/front_end_development_libraries/project2_markdown_previewer"
+							className="btn wBorder marginRight10"
+							target="_blank"
+							id="tumblr-quote"
+						>
+							{' '}
+							Check the code on &nbsp;
+							<i className="fa fa-github" />
+						</a>
+					</div>
 				</div>
 			</div>
 			<div className="text-center px-3 topDiv">

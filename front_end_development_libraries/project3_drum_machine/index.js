@@ -124,6 +124,20 @@ function App() {
 						</div>
 					)}
 				</div>
+				<br />
+				<br />
+				<div className="toGithub">
+					<a
+						href="https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/front_end_development_libraries/project3_drum_machine"
+						className="btn wBorder marginRight10"
+						target="_blank"
+						id="tumblr-quote"
+					>
+						{' '}
+						Check the code on &nbsp;
+						<i className="fa fa-github" />
+					</a>
+				</div>
 				<div className="text-center marginTop1">
 					<a href="https://github.com/AitorSantaeugenia" target="_blank" className="noFormat">
 						<h3 className="noFormat">Aitor J. Santaeugenia</h3>

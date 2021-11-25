@@ -99,6 +99,20 @@ function App() {
 					.
 				</div>
 			</div>
+			<br />
+			<br />
+			<div className="toGithub">
+				<a
+					href="https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/front_end_development_libraries/project4_javascript_calculator"
+					className="btn wBorder marginRight10"
+					target="_blank"
+					id="tumblr-quote"
+				>
+					{' '}
+					Check the code on &nbsp;
+					<i className="fa fa-github" />
+				</a>
+			</div>
 			<div className="footer">
 				<div className="text-center ">
 					<a href="https://github.com/AitorSantaeugenia" target="_blank" className="noFormat">
