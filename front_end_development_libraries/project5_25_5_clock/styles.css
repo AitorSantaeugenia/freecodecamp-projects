@@ -22,3 +22,20 @@ body{
     color:white;
     background-color:#333;
 }
+
+.noFormat{
+    color:white;
+    text-decoration: none;
+}
+
+.marginTop20{
+    margin-top:20px;
+}
+
+.marginRight10{
+    margin-right: 10px;
+}
+
+.separator{
+    margin-top:40px;
+}
