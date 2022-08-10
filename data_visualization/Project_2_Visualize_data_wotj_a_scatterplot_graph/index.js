@@ -32,7 +32,17 @@ let generateScales = () => {
     ])
     .range([padding, width - padding]);
 
-  yScale = d3.scaleTime().range([padding, height - padding]);
+  yScale = d3
+    .scaleTime()
+    .domain([
+      d3.min(values, (item) => {
+        return new Date(item["Seconds"] * 1000);
+      }),
+      d3.max(values, (item) => {
+        return new Date(item["Seconds"] * 1000);
+      }),
+    ])
+    .range([padding, height - padding]);
 };
 
 let drawPoints = () => {
@@ -51,12 +61,15 @@ let drawPoints = () => {
     })
     .attr("cx", (item) => {
       return xScale(item["Year"]);
+    })
+    .attr("cy", (item) => {
+      return yScale(new Date(item["Seconds"] * 1000));
     });
 };
 
 let generateAxes = () => {
   let xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
-  let yAxis = d3.axisLeft(yScale);
+  let yAxis = d3.axisLeft(yScale).tickFormat(d3.timeFormat("%M:%S"));
   svg
     .append("g")
     .call(xAxis)
