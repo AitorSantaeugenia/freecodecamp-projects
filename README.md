@@ -40,7 +40,7 @@ Projects completed while going through the FreeCodeCamp course.
 
 ## Data Visualization Certification
    1. Visualize Data with a Bar Chart - [View On CodePen](https://codepen.io/santaeugeniaJ/full/gOejRBN).</br>
-   &nbsp;&nbsp;&nbsp;&nbsp;- [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/data_visualization/Project_1_Visualize_data_with_a_bar_chart).
+   &nbsp;&nbsp;&nbsp;&nbsp;- [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/data_visualization/Project_1_Visualize_data_with_a_bar_chart).</br>
     2. Visualize Data with a Scatterplot Graph - [View On CodePen](https://codepen.io/santaeugeniaJ/full/QWmBJXE).</br>
    &nbsp;&nbsp;&nbsp;&nbsp;- [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/data_visualization/Project_2_Visualize_data_with_a_scatterplot_graph).
 
