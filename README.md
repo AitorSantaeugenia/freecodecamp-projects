@@ -38,5 +38,9 @@ Projects completed while going through the FreeCodeCamp course.
 
    ![Certificate](https://user-images.githubusercontent.com/14861253/143505781-79bf1958-c890-43ed-ad2f-1efecdb3a36a.png)
 
+## Data Visualization Certification
+   1. Visualize Data with a Bar Chart - [View On CodePen](https://codepen.io/santaeugeniaJ/full/gOejRBN).</br>
+   &nbsp;&nbsp;&nbsp;&nbsp;- [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/data_visualization/Project_1_Visualize_data_with_a_bar_chart).
+
    [Donate to freeCodeCamp](https://donate.freecodecamp.org/).
    
