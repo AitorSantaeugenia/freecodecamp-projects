@@ -8,6 +8,10 @@ let values = [];
 let xScale;
 let yScale;
 
+let minYear;
+let maxYear;
+let numYears = maxYear - minYear;
+
 let width = 1200;
 let height = 600;
 let padding = 60;
@@ -16,9 +20,25 @@ let canvas = d3.select("#canvas");
 canvas.attr("width", width);
 canvas.attr("height", height);
 
+let tooltip = d3.select("#tooltip");
+
 let generateScales = () => {
-  xScale = d3.scaleLinear().range([padding, width - padding]);
-  yScale = d3.scaleTime().range([padding, height - padding]);
+  minYear = d3.min(values, (item) => {
+    return item["year"];
+  });
+
+  maxYear = d3.max(values, (item) => {
+    return item["year"];
+  });
+
+  xScale = d3
+    .scaleLinear()
+    .domain([minYear, maxYear + 1])
+    .range([padding, width - padding]);
+  yScale = d3
+    .scaleTime()
+    .domain([new Date(0, 0, 0, 0, 0, 0, 0), new Date(0, 12, 0, 0, 0, 0, 0)])
+    .range([padding, height - padding]);
 };
 
 let drawCells = () => {
@@ -41,19 +61,60 @@ let drawCells = () => {
       }
     })
     .attr("data-year", (item) => {
-      return item;
+      return item["year"];
     })
     .attr("data-month", (item) => {
-      return item;
+      return item["month"] - 1;
     })
     .attr("data-temp", (item) => {
-      return item;
+      return baseTemp + item["variance"];
+    })
+    .attr("height", (height - 2 * padding) / 12)
+    .attr("y", (item) => {
+      return yScale(new Date(0, item["month"] - 1, 0, 0, 0, 0, 0));
+    })
+    .attr("width", (item) => {
+      numYears = maxYear - minYear;
+      return (width - 2 * padding) / numYears;
+    })
+    .attr("x", (item) => {
+      return xScale(item["year"]);
+    })
+    .on("mouseover", (item) => {
+      tooltip.transition().style("visibility", "visible");
+      let monthNames = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+
+      tooltip.text(
+        item["year"] +
+          " " +
+          monthNames[item["month"] - 1] +
+          " : " +
+          item["variance"]
+      );
+
+      tooltip.attr("data-year", item["year"]);
+    })
+    .on("mouseout", (item) => {
+      tooltip.transition().style("visibility", "hidden");
     });
 };
 
 let drawAxes = () => {
-  let xAxis = d3.axisBottom(xScale);
-  let yAxis = d3.axisLeft(yScale);
+  let xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
+  let yAxis = d3.axisLeft(yScale).tickFormat(d3.timeFormat("%B"));
 
   canvas
     .append("g")

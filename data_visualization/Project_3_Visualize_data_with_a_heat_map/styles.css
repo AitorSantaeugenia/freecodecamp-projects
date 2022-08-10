@@ -16,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    overflow: hidden;
+
 }
 
 svg{
@@ -28,3 +28,20 @@ svg{
     min-height: 600px;
     margin: 0 auto;
 }
+
+#legend{
+    color: rgb(56, 58, 74);
+    font-size: 18px;
+    text-align: center;
+    min-height: 150px;
+}
+
+#tooltip{
+    visibility: hidden;
+    position: absolute;
+    padding: 10px;
+    font: 12px sans-serif;
+    border:1px solid rgb(56, 58, 74);
+    border-radius: 8px;
+    pointer-events: none;
+  }
