@@ -121,7 +121,7 @@ req.open("GET", url, true);
 req.onload = () => {
   data = JSON.parse(req.responseText);
   values = data.data;
-  console.log(values);
+  // console.log(values);
   drawCanvas();
   generateScales();
   drawBars();
