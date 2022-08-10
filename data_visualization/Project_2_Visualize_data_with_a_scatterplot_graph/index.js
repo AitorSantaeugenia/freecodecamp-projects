@@ -12,6 +12,7 @@ let height = 600;
 let padding = 40;
 
 let svg = d3.select("svg");
+let tooltip = d3.select("#tooltip");
 
 // Methods
 let drawCanvas = () => {
@@ -25,10 +26,10 @@ let generateScales = () => {
     .domain([
       d3.min(values, (item) => {
         return item["Year"];
-      }),
+      }) - 1,
       d3.max(values, (item) => {
         return item["Year"];
-      }),
+      }) + 1,
     ])
     .range([padding, width - padding]);
 
@@ -64,6 +65,46 @@ let drawPoints = () => {
     })
     .attr("cy", (item) => {
       return yScale(new Date(item["Seconds"] * 1000));
+    })
+    .attr("fill", (item) => {
+      return item["URL"] ? "#DC143C" : "#3CB371";
+    })
+    .on("mouseover", (item) => {
+      tooltip
+        .transition()
+        .style("visibility", "visible")
+        .attr("data-year", item["Year"])
+        .attr("data-allegation", item["URL"])
+        .style("left", event.pageX + "px")
+        .style("top", event.pageY - 28 + "px")
+        .style("background", (background) => {
+          return item["URL"] ? "#bd6073" : "#3CB371";
+        });
+
+      if (item["Doping"] != "") {
+        tooltip.text(
+          item["Year"] +
+            " - " +
+            item["Name"] +
+            " - " +
+            item["Time"] +
+            " - " +
+            item["Doping"]
+        );
+      } else {
+        tooltip.text(
+          item["Year"] +
+            " - " +
+            item["Name"] +
+            " - " +
+            item["Time"] +
+            " - " +
+            "No Allegations"
+        );
+      }
+    })
+    .on("mouseout", (item) => {
+      tooltip.transition().style("visibility", "hidden");
     });
 };
 
