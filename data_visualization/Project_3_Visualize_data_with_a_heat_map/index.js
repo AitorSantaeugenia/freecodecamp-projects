@@ -13,7 +13,7 @@ let maxYear;
 let numYears = maxYear - minYear;
 
 let width = 1200;
-let height = 600;
+let height = 400;
 let padding = 60;
 
 let canvas = d3.select("#canvas");
@@ -21,6 +21,23 @@ canvas.attr("width", width);
 canvas.attr("height", height);
 
 let tooltip = d3.select("#tooltip");
+let iconBar = d3.select("#iconBar");
+let iconClose = d3.select("#iconClose");
+let legend = d3.select("#legend");
+
+let showMenu = () => {
+  iconBar.on("click", () => {
+    iconBar.attr("class", "hidden");
+    legend.attr("class", "");
+    iconClose.attr("class", "fa fa-times icon-Close");
+  });
+
+  iconClose.on("click", () => {
+    iconBar.attr("class", "fa fa-bars icon-Bars");
+    legend.attr("class", "hidden");
+    iconClose.attr("class", "hidden");
+  });
+};
 
 let generateScales = () => {
   minYear = d3.min(values, (item) => {
@@ -81,7 +98,14 @@ let drawCells = () => {
       return xScale(item["year"]);
     })
     .on("mouseover", (item) => {
-      tooltip.transition().style("visibility", "visible");
+      tooltip
+        .transition()
+        .style("visibility", "visible")
+        .style("left", event.pageX - 50 + "px")
+        .style("top", event.pageY - 40 + "px")
+        .style("background", "rgba(0,0,0,0.8)")
+        .style("color", "white");
+
       let monthNames = [
         "January",
         "February",
@@ -99,7 +123,7 @@ let drawCells = () => {
 
       tooltip.text(
         item["year"] +
-          " " +
+          " - " +
           monthNames[item["month"] - 1] +
           " : " +
           item["variance"]
@@ -132,12 +156,9 @@ let drawAxes = () => {
 req.open("GET", url, true);
 req.onload = () => {
   let object = JSON.parse(req.responseText);
-  console.log(req.responseText);
   baseTemp = object["baseTemperature"];
   values = object["monthlyVariance"];
-
-  // console.log(baseTemp);
-  // console.log(values);
+  showMenu();
   generateScales();
   drawCells();
   drawAxes();

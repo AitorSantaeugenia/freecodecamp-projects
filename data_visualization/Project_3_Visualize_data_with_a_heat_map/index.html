@@ -6,36 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://use.fontawesome.com/a5f25affbf.js"></script>
+
     <link rel="stylesheet" href="./styles.css">
     <title>Visualize Data with a Heat Map</title>
 </head>
 
 <body>
-    <h1 id="title">Monthly Global Land-Surface Temperature</h1>
-    <h4 id="description">Temperature from 1753 to 2015. Average is 8.66c</h4>
+    <i class="fa fa-bars icon-Bars" aria-hidden="true" id="iconBar"></i>
+    <i class="fa fa-times icon-Close hidden" aria-hidden="true" id="iconClose"></i>
+    <h3 id="title">Monthly Global Land-Surface Temperature</h3>
+    <h4 id="description">1753 - 2015: base temperature 8.66℃</h4>
     <svg id="canvas"></svg>
-    <svg id='legend'>
+    <svg id='legend' class="hidden">
         <g>
             <rect x="10" y="0" width="40" height="40" fill="SteelBlue"></rect>
-            <text x="60" y="20" fill="white">Variance of -1 or less</text>
+            <text x="60" y="20" fill="white">Variance <= -1</text>
         </g>
         <g>
             <rect x="10" y="40" width="40" height="40" fill="LightSteelBlue"></rect>
-            <text x="60" y="60" fill="white">On or Below Average</text>
+            <text x="60" y="60" fill="white">
+                < Average</text>
         </g>
         <g>
             <rect x="10" y="80" width="40" height="40" fill="Orange"></rect>
-            <text x="60" y="100" fill="white">Above Average</text>
+            <text x="60" y="100" fill="white">> Average</text>
         </g>
         <g>
             <rect x="10" y="120" width="40" height="40" fill="Crimson"></rect>
-            <text x="60" y="140" fill="white">Variance of +1 or more</text>
+            <text x="60" y="140" fill="white">Variance >= 1</text>
         </g>
     </svg>
     <div id="tooltip"></div>
 
+
     <script defer src="./index.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 </body>
 
 </html>

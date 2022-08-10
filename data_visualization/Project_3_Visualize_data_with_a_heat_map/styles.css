@@ -15,8 +15,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-
 }
 
 svg{
@@ -25,15 +23,61 @@ svg{
 
 #canvas{
     min-width: 1200px;
-    min-height: 600px;
+    min-height: 400px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 #legend{
-    color: rgb(56, 58, 74);
-    font-size: 18px;
+    background-color: rgb(56, 58, 74);
+    font-size: 12px;
     text-align: center;
-    min-height: 150px;
+    position:absolute;
+    top:10px;
+    right:20px;
+    min-height:160px;
+    max-height:160px;
+    width: 150px;
+    padding:40px 0px 40px 0px;
+    z-index:1;
+}
+
+.icon-Bars{
+    font-size: 30px !important;
+    cursor:pointer;
+    right:20px;
+    top:10px;
+    position:absolute;
+    z-index:5;
+    color:coral;
+}
+
+.icon-Close{
+    font-size: 30px !important;
+    cursor:pointer;
+    right:20px;
+    top:10px;
+    position:absolute;
+    z-index:5;
+    color:coral;
+}
+
+.icon-Close:hover{
+    color:aliceblue;
+}
+
+.icon-Bars:hover{
+    color:aliceblue;
+}
+
+.icon-Bars:hover:before{
+    content:"Click to check the legend";
+    font-size:20px;
+    color: coral;
+}
+
+.hidden{
+    display:none !important;
 }
 
 #tooltip{
@@ -44,4 +88,13 @@ svg{
     border:1px solid rgb(56, 58, 74);
     border-radius: 8px;
     pointer-events: none;
+    z-index:10;
   }
+
+  #title{
+    margin: 15px;
+  }
+
+.cell:hover{
+    stroke: black; 
+}
