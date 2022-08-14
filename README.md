@@ -45,6 +45,8 @@ Projects completed while going through the FreeCodeCamp course.
    &nbsp;&nbsp;&nbsp;&nbsp;- [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/data_visualization/Project_2_Visualize_data_with_a_scatterplot_graph).
    3. Visualize Data with a Heat Map - [View On CodePen](https://codepen.io/santaeugeniaJ/full/MWVBRJO).</br>
    &nbsp;&nbsp;&nbsp;&nbsp;- [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/data_visualization/Project_3_Visualize_data_with_a_heat_map).
+   4. Visualize Data with a Choropleth Map - [View On CodePen](https://codepen.io/santaeugeniaJ/full/YzaJVXz).</br>
+   &nbsp;&nbsp;&nbsp;&nbsp;- [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/data_visualization/Project_4_Visualize_data_with_a_choropleth_map).
 
    [Donate to freeCodeCamp](https://donate.freecodecamp.org/).
    
