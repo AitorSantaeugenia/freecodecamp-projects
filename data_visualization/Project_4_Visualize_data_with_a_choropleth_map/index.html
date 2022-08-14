@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"
+        integrity="sha256-tHoAPGoNdhIR28YHl9DWLzeRfdwigkH7OCBXMrHXhoM=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./styles.css">
+    <title>Visualize Data with a Choropleth Map</title>
+</head>
+
+<body>
+    <h2 id="title">United States Educational Attainment</h2>
+    <h4 id="description">Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014)
+    </h4>
+    <svg id='legend'>
+        <g transform="translate(0,40)" text-anchor="middle">
+            <rect x="10" y="0" width="40" height="8" fill="#e5f5e0"></rect>
+            <text x="10" y="30" fill="black">
+                3%</text>
+
+            <rect x="50" y="0" width="40" height="8" fill="#c7e9c0"></rect>
+            <text x="50" y="30" fill="black">
+                12%</text>
+
+            <rect x="90" y="0" width="40" height="8" fill="#a1d99b"></rect>
+            <text x="90" y="30" fill="black">21%</text>
+
+            <rect x="130" y="0" width="40" height="8" fill="#74c476"></rect>
+            <text x="130" y="30" fill="black">30%</text>
+
+            <rect x="170" y="0" width="40" height="8" fill="#41ab5d"></rect>
+            <text x="170" y="30" fill="black">39%</text>
+
+            <rect x="210" y="0" width="40" height="8" fill="#238b45"></rect>
+            <text x="210" y="30" fill="black">48%</text>
+
+            <rect x="250" y="0" width="40" height="8" fill="#006d2c"></rect>
+            <text x="250" y="30" fill="black">57%</text>
+            <text x="290" y="30" fill="black">66%</text>
+        </g>
+    </svg>
+    <svg id="canvas"></svg>
+    <div id="tooltip"></div>
+
+    <script defer src="./index.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+
+</html>
