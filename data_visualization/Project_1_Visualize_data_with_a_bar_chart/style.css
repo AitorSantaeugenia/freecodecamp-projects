@@ -50,3 +50,37 @@ g{
     fill: #17252A;
     font-weight: bold;
 }
+
+/* Footer */
+.toGithub{
+    background-color:black;
+    padding:20px;
+    margin-top:20px;
+    color:white;
+}
+
+.toGithub a:hover{
+    color:rgb(235, 81, 81);
+   
+}
+
+.toGithub a{
+    color:white;
+    text-decoration: none;
+}
+
+.toGithub i{
+    color:white;
+}
+
+.footer{
+    margin:20px 0px;
+}
+
+.margin-left{
+    margin-left:20px;
+}
+
+.footerIcons a:hover{
+    color:red;
+}
