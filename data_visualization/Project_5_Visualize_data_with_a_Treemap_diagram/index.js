@@ -71,19 +71,19 @@ let drawTreeMap = () => {
     .attr("fill", (movie) => {
       let category = movie["data"]["category"];
       if (category === "Action") {
-        return "orange";
+        return "rgb(76, 146, 195)";
       } else if (category === "Drama") {
-        return "lightgreen";
+        return "rgb(190, 210, 237)";
       } else if (category === "Adventure") {
-        return "coral";
+        return "rgb(255, 153, 62)";
       } else if (category === "Family") {
-        return "lightblue";
+        return "rgb(255, 201, 147)";
       } else if (category === "Animation") {
-        return "pink";
+        return "rgb(86, 179, 86)";
       } else if (category === "Comedy") {
-        return "khaki";
+        return "rgb(173, 229, 161)";
       } else if (category === "Biography") {
-        return "tan";
+        return "rgb(222, 82, 83)";
       }
     })
     .attr("data-name", (movie) => {
