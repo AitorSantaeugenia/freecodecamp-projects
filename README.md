@@ -50,5 +50,7 @@ Projects completed while going through the FreeCodeCamp course.
    5. Visualize Data with a Treemap Diagram - [View On CodePen](https://codepen.io/santaeugeniaJ/full/dymQbEM).</br>
    &nbsp;&nbsp;&nbsp;&nbsp;- [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/data_visualization/Project_5_Visualize_data_with_a_Treemap_diagram).
 
+   ![Certificate](https://user-images.githubusercontent.com/14861253/184702523-0c5900ca-87c2-4a60-82d8-04878541d945.png)
+
    [Donate to freeCodeCamp](https://donate.freecodecamp.org/).
    
