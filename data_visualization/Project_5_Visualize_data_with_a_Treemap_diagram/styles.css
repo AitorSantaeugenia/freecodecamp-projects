@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+html{
+    min-height: 100%
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:50px;
+}
+
+#canvas{
+    min-width: 1000px;
+    min-height: 600px;
+    background-color: rgba(100, 110, 190, 0.562);
+    font-size:10px;
+}
+
+#legend{
+    background-color: rgb(56, 58, 74);
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    min-height: 330px;
+    max-height: 330px;
+    width: 150px;
+    padding-bottom: 20px;
+    z-index: 1;
+}
+
+
+
+#tooltip{
+    visibility: hidden;
+    position: absolute;
+    padding: 10px;
+    font: 12px sans-serif;
+    border:1px solid rgb(56, 58, 74);
+    border-radius: 8px;
+    pointer-events: none;
+    z-index:10;
+  }
+
+  /* ICONS SHOW / HIDE */
+ .icon-Bars{
+    font-size: 30px !important;
+    cursor:pointer;
+    right:20px;
+    top:10px;
+    position:absolute;
+    z-index:5;
+    color:coral;
+}
+
+.icon-Close{
+    font-size: 30px !important;
+    cursor:pointer;
+    right:20px;
+    top:10px;
+    position:absolute;
+    z-index:5;
+    color:coral;
+}
+
+.icon-Close:hover{
+    color:aliceblue;
+}
+
+.icon-Bars:hover{
+    color:aliceblue;
+}
+
+.icon-Bars:hover:before{
+    content:"Click to check the legend";
+    font-size:20px;
+    color: coral;
+}
+
+.hidden{
+    display:none !important;
+}
+
+#legendText{
+    position:absolute;
+    right:60px;
+    top:16px;
+    font-weight: bold;
+}
+
+.movieBlock:hover{
+    color: black; 
+    font-weight: bold;
+}
+
+.tile:hover{
+    stroke:black;
+    stroke-width: 5;
+}
+
+/* Footer */
+.toGithub{
+    background-color:black;
+    padding:20px;
+    margin-top:20px;
+    color:white;
+}
+
+.toGithub a:hover{
+    color:rgb(235, 81, 81);
+   
+}
+
+.toGithub a{
+    color:white;
+    text-decoration: none;
+}
+
+.toGithub i{
+    color:white;
+}
+
+.footer{
+    margin-top:20px;
+}
+
+.margin-left{
+    margin-left:20px;
+}
+
+.footerIcons a:hover{
+    color:red;
+}
