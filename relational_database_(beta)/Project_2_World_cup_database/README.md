@@ -61,12 +61,7 @@ chmod +x insert_data.sh
 ~~~
 
 #### 9 && 10- Instructions 9/10 in /submit/insert_data.sh
-<<<<<<< HEAD
 Check [insert_data.sh](https://github.com/AitorSantaeugenia/freecodecamp-projects/blob/main/relational_database_(beta)/Project_2_World_cup_database/submit/insert_data.sh)
 
 #### 11- Instruction 11 in /submit/queries.sh
 Check [queries.sh](https://github.com/AitorSantaeugenia/freecodecamp-projects/blob/main/relational_database_(beta)/Project_2_World_cup_database/submit/queries.sh)
-=======
-
-#### 11- Instruction 11 in /submit/queries.sh
->>>>>>> main
