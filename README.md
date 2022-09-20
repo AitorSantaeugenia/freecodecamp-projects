@@ -54,6 +54,7 @@ Projects completed while going through the FreeCodeCamp course.
 
    ## Relational database (beta)
   1. Celestial Bodies Database - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/blob/main/relational_database_(beta)/Project_1_Celestial_bodies_database/universe.sql).
+  2. World Cup Database - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/relational_database_(beta)/Project_2_World_cup_database/submit).
 
    [Donate to freeCodeCamp](https://donate.freecodecamp.org/).
    
