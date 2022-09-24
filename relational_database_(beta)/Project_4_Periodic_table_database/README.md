@@ -6,108 +6,217 @@
 psql --username=freecodecamp --dbname=postgres
 ~~~
 
-#### 1- You should create a database named salon
-~~~ sql
-CREATE DATABASE salon;
-~~~
-
-#### 2- You should connect to your database, then create tables named customers, appointments, and services
-~~~ bash
-\c salon
-~~~
+<code>Connect to the database</code>
 
 ~~~ sql
-CREATE TABLE customers();
-CREATE TABLE appointments();
-CREATE TABLE services();
+\c periodic_table
 ~~~
 
-#### 3- Each table should have a primary key column that automatically increments
+<code>Check the structure of the database</code>
+
+~~~ sql
+             List of relations
+ Schema |    Name    | Type  |    Owner     
+--------+------------+-------+--------------
+ public | elements   | table | freecodecamp
+ public | properties | table | freecodecamp
+(2 rows)
+~~~
+
+~~~ sql
+Table "public.elements"
+    Column     |         Type          | Collation | Nullable | Default 
+---------------+-----------------------+-----------+----------+---------
+ atomic_number | integer               |           | not null | 
+ symbol        | character varying(2)  |           |          | 
+ name          | character varying(40) |           |          | 
+Indexes:
+    "elements_pkey" PRIMARY KEY, btree (atomic_number)
+    "elements_atomic_number_key" UNIQUE CONSTRAINT, btree (atomic_number)
+~~~
+
+~~~ sql
+ Table "public.properties"
+    Column     |         Type          | Collation | Nullable | Default 
+---------------+-----------------------+-----------+----------+---------
+ atomic_number | integer               |           | not null | 
+ type          | character varying(30) |           |          | 
+ weight        | numeric(9,6)          |           | not null | 
+ melting_point | numeric               |           |          | 
+ boiling_point | numeric               |           |          | 
+Indexes:
+    "properties_pkey" PRIMARY KEY, btree (atomic_number)
+    "properties_atomic_number_key" UNIQUE CONSTRAINT, btree (atomic_number)
+~~~
+
+#### 1- You should rename the weight column to atomic_mass
+~~~ sql
+ALTER TABLE properties RENAME weight TO atomic_mass;
+~~~
+
+#### 2- You should rename the melting_point column to melting_point_celsius and the boiling_point column to boiling_point_celsius
+~~~ sql
+ALTER TABLE properties RENAME melting_point TO melting_point_celsius;
+ALTER TABLE properties RENAME boiling_point TO boiling_point_celsius;
+~~~
+
+#### 3- Your melting_point_celsius and boiling_point_celsius columns should not accept null values
+~~~ sql
+ALTER TABLE properties ALTER COLUMN melting_point_celsius SET NOT NULL;
+ALTER TABLE properties ALTER COLUMN boiling_point_celsius SET NOT NULL;
+~~~
+
+#### 4- You should add the UNIQUE constraint to the symbol and name columns from the elements table
+~~~ sql
+ALTER TABLE elements ADD UNIQUE(symbol);
+ALTER TABLE elements ADD UNIQUE(name);
+~~~
+
+#### 5- Your symbol and name columns should have the NOT NULL constraint
+~~~ sql
+ALTER TABLE elements ALTER COLUMN symbol SET NOT NULL;
+ALTER TABLE elements ALTER COLUMN name SET NOT NULL;
+~~~
+
+#### 6- You should set the atomic_number column from the properties table as a foreign key that references the column of the same name in the elements table
+~~~ sql
+ALTER TABLE properties ADD FOREIGN KEY(atomic_number) REFERENCES elements(atomic_number);
+~~~
+
+#### 7- You should create a types table that will store the three types of elements
+~~~ sql
+CREATE TABLE types(type_id SERIAL NOT NULL);
+~~~
+
+#### 8- Your types table should have a type_id column that is an integer and the primary key
+~~~ sql
+ALTER TABLE types ADD PRIMARY KEY(type_id);
+~~~
+
+#### 9- Your types table should have a type column that's a VARCHAR and cannot be null. It will store the different types from the type column in the properties table
+~~~ sql
+ALTER TABLE types ADD COLUMN type VARCHAR(20) NOT NULL;
+~~~
+
+#### 10- You should add three rows to your types table whose values are the three different types from the properties table
+~~~ sql
+INSERT INTO types(type) VALUES('nonmetal'),('metal'),('metalloid');
+~~~
+
+#### 11- Your properties table should have a type_id foreign key column that references the type_id column from the types table. It should be an INT with the NOT NULL constraint
 #### &&
-#### 4- Your games table should have a game_id column that is a type of SERIAL and is the primary key, a year column of type INT, and a round column of type VARCHAR
+#### 12- Each row in your properties table should have a type_id value that links to the correct type from the types table
 ~~~ sql
-DROP TABLE customers;
-DROP TABLE appointments;
-DROP TABLE services;
-CREATE TABLE customers(cutomer_id SERIAL PRIMARY KEY);
-CREATE TABLE appointments(appointment_id SERIAL PRIMARY KEY);
-CREATE TABLE services(service_id SERIAL PRIMARY KEY);
+ALTER TABLE types ADD PRIMARY KEY(type_id);
+ALTER TABLE properties ADD COLUMN type_id INT REFERENCES types(type_id);
+UPDATE properties SET type_id =1 WHERE type='nonmetal';
+UPDATE properties SET type_id =2 WHERE type='metal';
+UPDATE properties SET type_id =3 WHERE type='metalloid';
+ALTER TABLE properties ALTER COLUMN type_id SET NOT NULL;
 ~~~
 
-#### 5- Your appointments table should have a customer_id foreign key that references the customer_id column from the customers table
+#### 13- You should capitalize the first letter of all the symbol values in the elements table. Be careful to only capitalize the letter and not change any others
 ~~~ sql
-ALTER TABLE appointments ADD COLUMN customer_id INT REFERENCES customers(cutomer_id);
+UPDATE elements SET symbol='He' WHERE symbol='he';
+UPDATE elements SET symbol='Li' WHERE symbol='li';
+UPDATE elements SET symbol='Mt' WHERE symbol='mT';
 ~~~
 
-#### 6- Your appointments table should have a service_id foreign key that references the service_id column from the services table
+#### 14- You should remove all the trailing zeros after the decimals from each row of the atomic_mass column. You may need to adjust a data type to DECIMAL for this. Be careful not to change the value
 ~~~ sql
-ALTER TABLE appointments ADD COLUMN service_id INT REFERENCES services(service_id);
+ALTER TABLE properties ALTER COLUMN atomic_mass TYPE real;
 ~~~
 
-#### 7- Your customers table should have phone that is a VARCHAR and must be unique
+### 15- You should add the element with atomic number 9 to your database. Its name is Fluorine, symbol is F, mass is 18.998, melting point is -220, boiling point is -188.1, and it's a nonmetal
+### &&
+### 16- You should add the element with atomic number 10 to your database. Its name is Neon, symbol is Ne, mass is 20.18, melting point is -248.6, boiling point is -246.1, and it's a nonmetal
 ~~~ sql
-ALTER TABLE customers ADD COLUMN phone VARCHAR(10) UNIQUE;
+INSERT INTO elements (atomic_number, symbol, name) VALUES(9, 'F', 'Fluorine');
+INSERT INTO elements (atomic_number, symbol, name) VALUES(10, 'Ne', 'Neon');
+INSERT INTO properties(atomic_number, typ, atomic_mass, melting_point_celsius, boiling_point_celsius, type_id) VALUES(9, 'nonmetal', 18.998, -220, -188.1, 1);
+INSERT INTO properties(atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius, type_id) VALUES(10, 'nonmetal', 20.18, -248.6, -246.1, 1);
 ~~~
 
-#### 8- Your customers and services tables should have a name column
-~~~ sql
- ALTER TABLE customers ADD COLUMN name VARCHAR(20);
- ALTER TABLE services ADD COLUMN name VARCHAR(20);
+### 16- You should create a periodic_table folder in the project folder and turn it into a git repository with git init
+~~~ bash
+mkdir periodic_table
+cd periodic_table
+git init
 ~~~
 
-#### 9- Your appointments table should have a time column that is a VARCHAR
-~~~ sql
-ALTER TABLE appointments ADD COLUMN time VARCHAR(10);
+### 17- Your repository should have a main branch with all your commits
+~~~ bash
+## We solve this after first commit, that creates master
 ~~~
 
-#### 10- You should have at least three rows in your services table for the different services you offer, one with a service_id of 1
-~~~ sql
-INSERT INTO services(name) VALUES('cut'),('color'),('perm'),('style'),('trim');
-SELECT * FROM services;
- service_id | name  
-------------+-------
-          1 | cut
-          2 | color
-          3 | perm
-          4 | style
-          5 | trim
+### 18- Your periodic_table repo should have at least five commits
+~~~ bash
+## We solve this while working with the script
 ~~~
 
-#### 11- You should create a script file named salon.sh in the project folder
-<code>In bash console</code>
+### 19- You should create an element.sh file in your repo folder for the program I want you to make
+~~~ bash
+touch element.sh
+~~~
+
+### 20- Your script (.sh) file should have executable permissions
+~~~ bash
+chmod +x element.sh
+~~~
+
+<code>Check the code of the script for these tasks</code>
+
+### 21- If you run ./element.sh, it should output Please provide an element as an argument. and finish running.
+### 22- If you run ./element.sh 1, ./element.sh H, or ./element.sh Hydrogen, it should output The element with atomic number 1 is Hydrogen (H). It's a nonmetal, with a mass of 1.008 amu. Hydrogen has a melting point of -259.1 celsius and a boiling point of -252.9 celsius.
+### 23- If you run ./element.sh script with another element as input, you should get the same output but with information associated with the given element.
+### 24- If the argument input to your element.sh script doesn't exist as an atomic_number, symbol, or name in the database, the output should be I could not find that element in the database.
+
+<code>---</code>
+
+### 25- The message for the first commit in your repo should be Initial commit
+### &&
+### 26- The rest of the commit messages should start with fix:, feat:, refactor:, chore:, or test:
+~~~ bash
+## We can check all the commits below
+
+## Our first commit was file: added element.sh
+## so yeah, fun
+f0594ea (HEAD -> main, master) feat: script done
+55c6360 feat: show message if it's not in the ddbb
+f27386b feat: echo if it does not exist
+6d68ed8 feat: add shebang and ddbb connection
+27ca26c file: added element.sh
+~~~
 
 ~~~ bash
-touch salon.sh
+## and then change the first commit to Initial commit
+git rebase --interactive --root
+
+## While playing with it, I changed the last commit we have done (first in order)
+## git rebase -i HEAD~1
+5bb95c8 (HEAD -> main) test: testing
+73c08ea feat: show message if it's not in the ddbb
+e5c20ea feat: echo if it does not exist
+00f4639 feat: add shebang and ddbb connection
+d3b4db4 Initial commit
 ~~~
 
-#### 12- Your script file should have a “shebang” that uses bash when the file is executed (use #! /bin/bash)
+### 27- You should delete the non existent element, whose atomic_number is 1000, from the two tables
+~~~ sql
+DELETE FROM properties WHERE atomic_number=1000;
+DELETE FROM elements WHERE atomic_number=1000;
+~~~
+
+### 28- Your properties table should not have a type column
+~~~ sql
+ALTER TABLE properties DROP COLUMN type;
+~~~
+
+### 29- You should finish your project while on the main branch. Your working tree should be clean and you should not have any uncommitted changes
 ~~~ bash
-### add the shebang in the top of the script
-#! /bin/bash
-~~~
-
-#### 13- Your script file should have executable permissions
-~~~ bash
-chmod +x salon.sh 
-~~~
-
-## These instructions are for creating the script
-~~~bash
-#### 14- You should not use the clear command in your script
-
-#### 15- You should display a numbered list of the services you offer before the first prompt for input, each with the format #) < service >. For example, 1) cut, where 1 is the service_id
-
-#### 16- If you pick a service that doesn't exist, you should be shown the same list of services again
-
-#### 17- Your script should prompt users to enter a service_id, phone number, a name if they aren’t already a customer, and a time. You should use read to read these inputs into variables named SERVICE_ID_SELECTED, CUSTOMER_PHONE, CUSTOMER_NAME, and SERVICE_TIME
-
-#### 18- If a phone number entered doesn’t exist, you should get the customers name and enter it, and the phone number, into the customers table
-
-#### 19- You can create a row in the appointments table by running your script and entering 1, 555-555-5555, Fabio, 10:30 at each request for input if that phone number isn’t in the customers table. The row should have the customer_id for that customer, and the service_id for the service entered
-
-#### 20- You can create another row in the appointments table by running your script and entering 2, 555-555-5555, 11am at each request for input if that phone number is already in the customers table. The row should have the customer_id for that customer, and the service_id for the service entered
-
-#### 21- After an appointment is successfully added, you should output the message I have put you down for a < service > at < time >, < name> . For example, if the user chooses cut as the service, 10:30 is entered for the time, and their name is Fabio in the database the output would be I have put you down for a cut at 10:30, Fabio. Make sure your script finishes running after completing any of the tasks above, or else the tests won't pass
+## I was working and commiting to master so:
+git checkout main
+git merge master
 ~~~
 
 ### You can check the script with all these instructions, [here](https://github.com/AitorSantaeugenia/freecodecamp-projects/blob/main/relational_database_(beta)/Project_3_Salon_appointment_scheduler/submit/salon.sh)
