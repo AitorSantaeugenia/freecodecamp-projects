@@ -23,8 +23,8 @@ CREATE TABLE teams();
 
 #### 3- Your teams table should have a team_id column that is a type of SERIAL and is the primary key, and a name column that has to be UNIQUE
 ~~~ sql
-DROP TABLE teams();
-DROP TABLE games();
+DROP TABLE teams;
+DROP TABLE games;
 CREATE TABLE teams(team_id SERIAL PRIMARY KEY);
 ALTER TABLE teams ADD COLUMN name VARCHAR(50) UNIQUE NOT NULL;
 ~~~
