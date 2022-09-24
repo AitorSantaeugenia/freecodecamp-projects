@@ -219,4 +219,4 @@ git checkout main
 git merge master
 ~~~
 
-### You can check the script with all these instructions, [here](https://github.com/AitorSantaeugenia/freecodecamp-projects/blob/main/relational_database_(beta)/Project_3_Salon_appointment_scheduler/submit/salon.sh)
+### You can check the script with all these instructions, [here](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/relational_database_(beta)/Project_4_Periodic_table_database/submit)
