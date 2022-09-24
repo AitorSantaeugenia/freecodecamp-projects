@@ -6,25 +6,27 @@
 psql --username=freecodecamp --dbname=postgres
 ~~~
 
-#### 1- You should create a database named worldcup
+#### 1- YYou should create a database named salon
 ~~~ sql
-CREATE DATABASE worldcup;
+CREATE DATABASE salon;
 ~~~
 
-#### 2- You should connect to your worldcup database and then create teams and games tables
+#### 2- You should connect to your database, then create tables named customers, appointments, and services
 ~~~ bash
-\c worldcup
+\c salon
 ~~~
 
 ~~~ sql
-CREATE TABLE games();
-CREATE TABLE teams();
+CREATE TABLE customers();
+CREATE TABLE appointments();
+CREATE TABLE services();
 ~~~
 
-#### 3- Your teams table should have a team_id column that is a type of SERIAL and is the primary key, and a name column that has to be UNIQUE
+#### 3- Each table should have a primary key column that automatically increments
 ~~~ sql
-DROP TABLE teams();
-DROP TABLE games();
+DROP TABLE customers;
+DROP TABLE appointments;
+DROP TABLE services;
 CREATE TABLE teams(team_id SERIAL PRIMARY KEY);
 ALTER TABLE teams ADD COLUMN name VARCHAR(50) UNIQUE NOT NULL;
 ~~~
