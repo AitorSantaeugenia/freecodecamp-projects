@@ -110,4 +110,4 @@ chmod +x salon.sh
 #### 21- After an appointment is successfully added, you should output the message I have put you down for a < service > at < time >, < name> . For example, if the user chooses cut as the service, 10:30 is entered for the time, and their name is Fabio in the database the output would be I have put you down for a cut at 10:30, Fabio. Make sure your script finishes running after completing any of the tasks above, or else the tests won't pass
 ~~~
 
-### You can check the script with all these instructions, [here](https://github.com/AitorSantaeugenia/freecodecamp-projects/blob/main/relational_database_(beta)/Project_2_World_cup_database/submit/insert_data.sh)
+### You can check the script with all these instructions, [here](https://github.com/AitorSantaeugenia/freecodecamp-projects/blob/main/relational_database_(beta)/Project_3_Salon_appointment_scheduler/submit/salon.sh)
