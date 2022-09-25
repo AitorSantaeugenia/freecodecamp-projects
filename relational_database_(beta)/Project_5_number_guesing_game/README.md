@@ -55,7 +55,7 @@ ALTER TABLE games ADD COLUMN user_id INT REFERENCES users(user_id);
 #### 12- If anything other than an integer is input as a guess, it should print That is not an integer, guess again:
 #### 13- When the secret number is guessed, your script should print You guessed it in <number_of_guesses> tries. The secret number was <secret_number>. Nice job!
 
-<code>-----------------------------------------------------------------------------------------------------------------------------</code>
+<code>---</code>
 
 #### 14- The message for the first commit should be Initial commit
 #### &&
