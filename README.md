@@ -59,5 +59,7 @@ Projects completed while going through the FreeCodeCamp course.
    4. Periodic Table Database - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/relational_database_(beta)/Project_4_Periodic_table_database).
    5. Number Guessing Game - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/relational_database_(beta)/Project_5_number_guesing_game).
 
+   ![Certificate](https://user-images.githubusercontent.com/14861253/192123679-6b6ff96e-21de-49b3-ac8f-ae19dbe8f258.png)
+
    [Donate to freeCodeCamp](https://donate.freecodecamp.org/).
    
