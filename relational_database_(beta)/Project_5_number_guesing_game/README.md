@@ -81,7 +81,7 @@ git merge master
 ### but it was not needed this time
 ~~~
 
-### You can check the script with all these instructions, [here](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/relational_database_(beta)/Project_4_Periodic_table_database/submit)
+### You can check the script with all these instructions, [here](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/relational_database_(beta)/Project_5_number_guesing_game/submit)
 
 
 
