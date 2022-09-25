@@ -171,7 +171,7 @@ chmod +x element.sh
 ### 23- If you run ./element.sh script with another element as input, you should get the same output but with information associated with the given element.
 ### 24- If the argument input to your element.sh script doesn't exist as an atomic_number, symbol, or name in the database, the output should be I could not find that element in the database.
 
-<code>-----------------------------------------------------------------------------------------------------------------------------</code>
+<code>---</code>
 
 ### 25- The message for the first commit in your repo should be Initial commit
 ### &&
