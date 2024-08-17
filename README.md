@@ -66,8 +66,9 @@ Projects completed while going through the FreeCodeCamp course.
    2. Request Header Parser Microservice - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/backend_development_and_APIs/project2/boilerplate-project-headerparser).
    3. URL Shortener Microservice - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/backend_development_and_APIs/project3/boilerplate-project-urlshortener).
    4. Exercise Tracker - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/backend_development_and_APIs/project4/boilerplate-project-exercisetracker).
+   5. File Metadata Microservice - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/backend_development_and_APIs/project5/boilerplate-project-filemetadata).
   
-   <!-- ![Certificate](https://user-images.githubusercontent.com/14861253/192123679-6b6ff96e-21de-49b3-ac8f-ae19dbe8f258.png) -->
+   ![Certificate](https://user-images.githubusercontent.com/14861253/192123679-6b6ff96e-21de-49b3-ac8f-ae19dbe8f258.png)
 
    [Donate to freeCodeCamp](https://donate.freecodecamp.org/).
    
