@@ -1,3 +1,10 @@
-# Request Header Parser Microservice
+# Timestamp Microservice
 
-This is the boilerplate for the Request Header Parser Microservice project. Instructions for building your project can be found at https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/request-header-parser-microservice
+Project done from the freecodecamp course:<br>
+https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/request-header-parser-microservice
+
+### Try it with
+
+```bash
+npm run start
+```
