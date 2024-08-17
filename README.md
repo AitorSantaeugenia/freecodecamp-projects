@@ -62,7 +62,7 @@ Projects completed while going through the FreeCodeCamp course.
    ![Certificate](https://user-images.githubusercontent.com/14861253/192123679-6b6ff96e-21de-49b3-ac8f-ae19dbe8f258.png)
 
    ## Backend development and APIs
-   1. Timestamp Microservice - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/backend_development_and_APIs/boilerplate-project-timestamp-main).
+   1. Timestamp Microservice - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/backend_development_and_APIs/project1/boilerplate-project-timestamp-main).
 
    <!-- ![Certificate](https://user-images.githubusercontent.com/14861253/192123679-6b6ff96e-21de-49b3-ac8f-ae19dbe8f258.png) -->
 
