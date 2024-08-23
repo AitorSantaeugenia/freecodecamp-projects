@@ -90,7 +90,7 @@ Projects completed while going through the FreeCodeCamp course.
   
 <div style="min-width: 600px; max-width: 800px; display:flex; flex-direction: row; justify-content:center;">
 
-   ![Certificate](https://private-user-images.githubusercontent.com/14861253/360976361-ae9eadc1-8057-4664-aed8-2f3f8e480122.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjQ0MjYyNTMsIm5iZiI6MTcyNDQyNTk1MywicGF0aCI6Ii8xNDg2MTI1My8zNjA5NzYzNjEtYWU5ZWFkYzEtODA1Ny00NjY0LWFlZDgtMmYzZjhlNDgwMTIyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA4MjMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwODIzVDE1MTIzM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTUwNjAzYTJjZjUxNmFkZWQyNjEzNWU0MGIyZmJlMDNkN2RkNzYwNzRiOGI4YTI1M2Y1ZTJjNWEyOTUzMmU4MmUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.2Ul8EgNJazTaGGmCnzaCcF-VlWRu-v5bsTrqJk3JhNU)
+   ![Certificate](https://i.imgur.com/2vUfFyS.png)
 
 </div>
 
