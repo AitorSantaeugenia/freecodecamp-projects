@@ -20,7 +20,7 @@ function ConvertHandler() {
       return undefined;
     }
   
-    console.log("getNum(result) -> "+result);
+    // console.log("getNum(result) -> "+result);
 
     return result;
   };
@@ -28,7 +28,7 @@ function ConvertHandler() {
   this.getUnit = function(input) {
     let result = stringSplitter(input)[1].toLowerCase();
 
-    console.log("getNum(result) -> "+result);
+    // console.log("getNum(result) -> "+result);
     
     switch(result){
       case "km":
@@ -120,7 +120,7 @@ function ConvertHandler() {
         return undefined;
     }
 
-    console.log("convert -> "+result.toFixed((5)));
+    // console.log("convert -> "+result.toFixed((5)));
 
     return parseFloat(result.toFixed((5)));
   };
