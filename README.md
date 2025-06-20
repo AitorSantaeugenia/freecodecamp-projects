@@ -98,7 +98,8 @@ Projects completed while going through the FreeCodeCamp course.
    1. Metric-Imperial Converter - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/quality_assurance_projects/1-metric_imperial_converter/boilerplate-project-metricimpconverter-main).
    2. Issue Tracker - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/quality_assurance_projects/2-issue_tracker/boilerplate-project-issuetracker-main).
    3. Personal library - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/quality_assurance_projects/3-personal_library).
-  
+   4. Sudoku Solver - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/quality_assurance_projects/4-sudoku_solver).
+
 <!-- <div style="min-width: 600px; max-width: 800px; display:flex; flex-direction: row; justify-content:center;">
 
    ![Certificate](https://i.imgur.com/2vUfFyS.png)
