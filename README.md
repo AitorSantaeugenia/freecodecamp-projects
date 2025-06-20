@@ -96,6 +96,7 @@ Projects completed while going through the FreeCodeCamp course.
 
    ## Quality Assurance
    1. Metric-Imperial Converter - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/quality_assurance_projects/1-metric_imperial_converter/boilerplate-project-metricimpconverter-main).
+   2. Issue Tracker - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/quality_assurance_projects/2-issue_tracker/boilerplate-project-issuetracker-main).
   
 <!-- <div style="min-width: 600px; max-width: 800px; display:flex; flex-direction: row; justify-content:center;">
 
