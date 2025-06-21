@@ -101,6 +101,12 @@ Projects completed while going through the FreeCodeCamp course.
    4. Sudoku Solver - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/quality_assurance_projects/4-sudoku_solver).
    5. American-British Translator - [Check code On Github](https://github.com/AitorSantaeugenia/freecodecamp-projects/tree/main/quality_assurance_projects/5-American_british_translator).
 
+<div style="min-width: 600px; max-width: 800px; display:flex; flex-direction: row; justify-content:center;">
+
+   ![Certificate](https://private-user-images.githubusercontent.com/14861253/457542674-3547c850-b137-492a-a530-04bc89bfd40b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTA0Njk1NzgsIm5iZiI6MTc1MDQ2OTI3OCwicGF0aCI6Ii8xNDg2MTI1My80NTc1NDI2NzQtMzU0N2M4NTAtYjEzNy00OTJhLWE1MzAtMDRiYzg5YmZkNDBiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MjElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjIxVDAxMjc1OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWI0NmQ4M2Y3NWI4ZWVhNzU2MmM3N2FlMGNlNGEwMzcwMWFiOGQ5NzdiNzYxZTA0M2U3Yzg1YzQwNjExNWQwODcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.7ITjBf_N2N1af37DYFbc_939WILiJYdCdHvKXUbf9xA)
+
+</div>
+
 <!-- <div style="min-width: 600px; max-width: 800px; display:flex; flex-direction: row; justify-content:center;">
 
    ![Certificate](https://i.imgur.com/2vUfFyS.png)
